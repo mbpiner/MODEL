@@ -1,0 +1,113 @@
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <created>2018-01-06T18:04:44.931000</created>
+    <modified>2018-01-06T18:04:44.931000</modified>
+    <up_axis>Y_UP</up_axis>
+  </asset>
+  <library_cameras>
+    <camera id="camera_0" name="camera_0">
+      <optics>
+        <technique_common>
+          <perspective>
+            <xfov>16.2601984511</xfov>
+            <znear>2905.9498</znear>
+            <zfar>3012.902</zfar>
+          </perspective>
+        </technique_common>
+      </optics>
+    </camera>
+  </library_cameras>
+  <library_effects>
+    <effect id="effect_0" name="effect_0">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0.0 0.0 0.0 1.0</color>
+            </emission>
+            <ambient>
+              <color>1 1 1 1</color>
+            </ambient>
+            <diffuse>
+              <color>1 1 1 1</color>
+            </diffuse>
+            <specular>
+              <color>1.0 1.0 1.0 1.0</color>
+            </specular>
+            <shininess>
+              <float>0.0</float>
+            </shininess>
+            <reflective>
+              <color>0.0 0.0 0.0 1.0</color>
+            </reflective>
+            <reflectivity>
+              <float>0.0</float>
+            </reflectivity>
+            <transparent>
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1.0</float>
+            </transparency>
+          </blinn>
+        </technique>
+        <extra>
+          <technique profile="GOOGLEEARTH">
+            <double_sided>0</double_sided>
+          </technique>
+        </extra>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_lights>
+    <light id="light_0" name="light_0">
+      <technique_common>
+        <directional>
+          <color>0.745888 0.745888 0.745888</color>
+        </directional>
+      </technique_common>
+    </light>
+    <light id="light_1" name="light_1">
+      <technique_common>
+        <directional>
+          <color>0.432344 0.432344 0.432344</color>
+        </directional>
+      </technique_common>
+    </light>
+    <light id="light_2" name="light_2">
+      <technique_common>
+        <ambient>
+          <color>0.1972 0.1972 0.1972</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_materials>
+    <material id="material_0" name="material_0">
+      <instance_effect url="#effect_0" />
+    </material>
+  </library_materials>
+  <library_visual_scenes>
+    <visual_scene id="_initial_view_">
+      <node id="light_node_0" name="light_node_0">
+        <lookat>0.0 0.0 0.0 0.357407 -0.660402 -0.660402 0.0 1.0 0.0</lookat>
+        <instance_light url="#light_0" />
+      </node>
+      <node id="light_node_1" name="light_node_1">
+        <lookat>0.0 0.0 0.0 -0.250563 -0.250563 -0.935113 0.0 1.0 0.0</lookat>
+        <instance_light url="#light_1" />
+      </node>
+      <node id="light_node_2" name="light_node_2">
+        <instance_light url="#light_2" />
+      </node>
+      <node id="node_0" name="node_0">
+        <lookat>470.957 529.914 -300.416 0.0 0.0 0.0 0.0 1.0 0.0</lookat>
+        <instance_camera url="#camera_0" />
+      </node>
+      <node id="node_1" name="node_1" />
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#_initial_view_" />
+  </scene>
+</COLLADA>
